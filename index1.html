@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pokedex</title>
+    <script src="script.js"></script>
+    <link rel="stylesheet" href="style.css">
+    <link rel="icon" href="icons8-poke-ball-50.png">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-HwwvtgBNo3bZJJLYd8oVXjrBZt8cqVSpeBNS5n7C8IVInixGAoxmnlMuBnhbgrkm" crossorigin="anonymous"></script>
+</head>
+<body onload="init()">
+    <header>
+        <div class="h-img-h-titel">
+            <img src="pokeball-background.png">
+            <h1>Pokedex</h1>
+        </div>
+        <form onsubmit="" class="d-flex" role="search">
+            <input oninput="debounceSearch()" id="search" class="form-control me-2" required type="search" placeholder="Pokemon Name" aria-label="Search">
+          </form>
+    </header>
+    <div id="allPokemons"></div>
+    <div id="pokemonLoaderDiv" class="pokemon-loader-div d-none">
+        <div id="pokemonLoader" class="pokemon-loader d-none"></div>
+    </div>
+    <!-- Pokemon Zoom HTML -->
+    <div onclick="off()" id="pokemonZoomArea"></div>
+</body>
+</html>
