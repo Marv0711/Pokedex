@@ -85,15 +85,6 @@ async function renderPokemonInfoCard(pokemonURL, i){
     createCurrentTypesForCard(pokemontypes, i);
 }
 
-window.addEventListener('scroll', () => {
-    // Überprüfen, ob das Ende der Seite erreicht wurde
-    if (window.innerHeight + window.scrollY >= document.body.offsetHeight) {
-        // Hier wird der Code ausgeführt, wenn das Ende der Seite erreicht wurde
-        loadMore();
-
-    }
-});
-
 function loadMore(){
     firstPokemonsCount += 30;
     firstPokemons = allPokemons['results'].slice(0, firstPokemonsCount);
